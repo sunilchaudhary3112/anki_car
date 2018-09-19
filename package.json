@@ -1,0 +1,16 @@
+{
+  "name": "anki_car",
+  "version": "1.0.0",
+  "description": "",
+  "main": "anki_car.js",
+  "dependencies": {
+    "anki-overdrive-api": "^1.0.1-beta.1",
+    "anki-overdrive-sdk": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
