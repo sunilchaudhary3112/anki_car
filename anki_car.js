@@ -12,7 +12,7 @@ var blue_car = "eaa44ead7392";
 var red_car = "c773068b8c30";
 var red_black = "c55edb917115";
 
-scanner.findById(red_car).then(vehicle => {
+scanner.findById(blue_car).then(vehicle => {
     console.log(vehicle);
     // Do something with vehicle...
     vehicle.addListener(function (message) {
@@ -35,23 +35,25 @@ scanner.findById(red_car).then(vehicle => {
                vehicle.setSpeed(0);
             }
             else if (i > 250 & i < 450) {
-                vehicle.setSpeed(600);
+                vehicle.setSpeed(500);
             } else if (i > 450 & i < 500) {
                 vehicle.setSpeed(0);
-            }else if (i > 500 & i < 505) {
-                vehicle.setSpeed(400);
-                //vehicle.changeLane(-23);
-                vehicle.uTurn(true);
-            }
-			else if(i > 505 && i < 600 ) {
-				vehicle.setSpeed(400);
-			}else if (i > 600 & i < 605) {
-                vehicle.setSpeed(500);
-                //vehicle.changeLane(-23);
+            }else if (i > 500 & i < 525) {
+                vehicle.setSpeed(200);
+                vehicle.changeLane(-23);
                 //vehicle.uTurn(true);
-            }else if(i > 605 && i < 1000 ) {
-				vehicle.setSpeed(500);
-			}
+            }
+			else if(i > 525 && i < 1000 ) {
+				vehicle.setSpeed(600);
+            }
+            // else if (i > 600 & i < 605) {
+            //     vehicle.setSpeed(500);
+            //     //vehicle.changeLane(-23);
+            //     //vehicle.uTurn(true);
+            // }else if(i > 605 && i < 1000 ) {
+			// 	vehicle.setSpeed(500);
+            // }
+            
             i++;
         }
     });
